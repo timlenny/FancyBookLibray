@@ -29,4 +29,7 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    @RequestMapping("/Bonus")
+    public List<String> getBonus(){return bookService.getBonus();}
+
 }

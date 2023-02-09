@@ -16,8 +16,8 @@ import static org.springframework.http.converter.json.Jackson2ObjectMapperBuilde
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest //Startet Spring autom. für Test
+@AutoConfigureMockMvc //Kofiguriert uns MockMvc da sehr aufwändig manuell
 public class ControllerTest {
 
     @Autowired

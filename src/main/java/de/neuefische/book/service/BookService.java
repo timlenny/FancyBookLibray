@@ -21,4 +21,8 @@ public class BookService {
         return resultBookList;
     }
 
+    public List<String> getBonus(){
+        return bookRepo.bonusBooks();
+    }
+
 }
