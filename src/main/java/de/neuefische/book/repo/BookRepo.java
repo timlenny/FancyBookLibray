@@ -18,17 +18,17 @@ public class BookRepo {
     }
 
     public List<String> bonusBooks() {
-        List<String> books = List.of("ABC und mehr", "Tiere&Pflanzen", "LW Buch");
+        List<String> books = List.of("ABC und mehr", "Das kleine ABC", "Tiere&Pflanzen", "LW Buch");
 
         for (String book : books) {
             if (book.contains("ABC")) {
-                book = "Kein ABC und mehr";
+                //Do something
             }
         }
 
         List<String> streamResult =
                 books.stream()
-                        .filter(inputString -> inputString.contains("a"))
+                        .filter(inputString -> inputString.contains("ABC"))
                         .collect(Collectors.toList()); //Collect sammelt alle Elemente am Ende des Streams und fügt in Liste
 
 
