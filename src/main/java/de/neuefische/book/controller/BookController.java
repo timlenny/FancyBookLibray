@@ -11,7 +11,12 @@ import java.util.List;
 @RequestMapping("/api")
 public class BookController {
 
-    private BookService bookService = new BookService();
+    private BookService bookService;
+
+    public BookController(BookService bookService){ //Hier wird autom. mit Spring die Instanz erzeugt
+        this.bookService = bookService;
+    }
+
     /*Keine neue Instanz erstellen , da wir unsere mit Spring teilen wollen / bzw. gemeinsame nutzen wollen. Wenn wir
     * hier keine neue Instanz erzeuegen, übernimmt Spring diesen Schritt für uns via -> Dependencie Injection.
     *
